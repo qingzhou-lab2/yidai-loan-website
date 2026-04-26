@@ -3,10 +3,12 @@
   "version": "1.0.0",
   "description": "Vanilla TypeScript application with Express + Vite (HTML + CSS + TS + Node API)",
   "scripts": {
-    "build": "bash ./scripts/build.sh",
-    "dev": "bash ./scripts/dev.sh",
+    "build": "npm run build:client && npm run build:server",
+    "build:client": "vite build",
+    "build:server": "tsup server/server.ts --format cjs --platform node --target node20 --outDir dist-server --no-splitting --no-minify",
+    "dev": "vite",
     "lint": "eslint",
-    "start": "bash ./scripts/start.sh",
+    "start": "node dist-server/server.js",
     "ts-check": "tsc -p tsconfig.json"
   },
   "dependencies": {
