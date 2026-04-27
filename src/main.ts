@@ -138,8 +138,8 @@ const contactMethods: ContactMethod[] = [
     id: 'wechat',
     icon: '💬',
     title: '微信咨询',
-    value: 'yidai888888',
-    qrCode: 'https://api.qrserver.com/v1/create-qr-code/?size=200x200&data=weixin://dl/chat/yidai888888',
+    value: 'ZFB7778884',
+    qrCode: '/src/assets/wechat-qrcode.jpg',
   },
   {
     id: 'phone',
